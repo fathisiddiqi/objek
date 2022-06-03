@@ -8,7 +8,7 @@ In NPM:
 
 ```bash
 
-$ npm install stringify-value
+$ npm install objek
 
 ```
 
