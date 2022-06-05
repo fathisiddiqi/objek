@@ -8,7 +8,7 @@ In NPM:
 
 ```bash
 
-$ npm install stringify-value
+$ npm install objek
 
 ```
 
@@ -25,7 +25,7 @@ const objek = require("objek");
 Change object value to whatever you want
 
 ```js
-const replaceObjectField = require("replace-object-field");
+const objek = require("objek");
 
 const exampleObject = {
   _id: "123456",
@@ -39,7 +39,7 @@ const exampleObject = {
 };
 
 // Replace _id to id
-const newObject = replaceObjectField({
+const newObject = objek.replaceObjectField({
   object: exampleObject,
   targetField: "_id",
   newField: "id",
@@ -73,7 +73,7 @@ Data Type for `value`:
 Change value of object to JSON
 
 ```js
-const stringifyValue = require("stringify-value");
+const objek = require("objek");
 
 const exampleObject = {
   name: "John",
@@ -85,7 +85,7 @@ const exampleObject = {
   },
 };
 
-const result = stringifyValue(exampleObject);
+const result = objek.valueToJSON(exampleObject);
 
 // result
 {
@@ -96,6 +96,70 @@ const result = stringifyValue(exampleObject);
         "city": "New York",
         "state": "NY",
     }',
+}
+
+```
+
+### `stringify(value)`
+
+Change object to JSON
+
+```js
+const objek = require("objek");
+
+const exampleObject = {
+  name: "John",
+  age: 30,
+  address: {
+    street: "Main Street",
+    city: "New York",
+    state: "NY",
+  },
+};
+
+const result = objek.stringify(exampleObject);
+
+// result
+'{
+    "name": "John",
+    "age: "30",
+    "address": {
+        "street": "Main Street",
+        "city": "New York",
+        "state": "NY",
+    },
+}'
+
+```
+
+### `objectify(value)`
+
+Change JSON to object
+
+```js
+const objek = require("objek");
+
+const exampleObject = '{
+  "name": "John",
+  "age": 30,
+  "address": {
+    "street": "Main Street",
+    "city": "New York",
+    "state": "NY",
+  },
+}';
+
+const result = objek.objectify(exampleObject);
+
+// result
+{
+    name: "John",
+    age: 30,
+    address: {
+        street: "Main Street",
+        city: "New York",
+        state: "NY",
+    },
 }
 
 ```
