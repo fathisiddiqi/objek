@@ -1,6 +1,6 @@
 # Objek
 
-#### Manipulate your object in one function
+#### Manipulate your object with simple functions
 
 ## Installation
 
