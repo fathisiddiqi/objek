@@ -8,6 +8,9 @@ const { fromPairs } = require("lodash");
 
 module.exports = function (object) {
   return fromPairs(
-    Object.entries(object).map(([key, value]) => [key, JSON.stringify(value)])
+    Object.entries(object).map(([key, value]) => [
+      key,
+      typeof value === "string" ? value : JSON.stringify(value),
+    ])
   );
 };
