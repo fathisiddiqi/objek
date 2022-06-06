@@ -4,7 +4,7 @@
   "description": "Manipulate your object with simple functions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest ./functions"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "jest": "^28.1.0",
     "lodash": "^4.17.21"
   }
 }
