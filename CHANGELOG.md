@@ -13,3 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `valueToJSON`
 - Add `stringify`
 - Add `objectify`
+
+## [1.0.0] - 2022-06-06
+
+### Added
+
+- Add `replaceObjectField`
+- Add `valueToJSON`
+- Add `stringify`
+- Add `objectify`
+
+## [1.1.0] - 2020-06-07
+
+### Added
+
+- Add `deleteField`
