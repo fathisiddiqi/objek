@@ -163,3 +163,25 @@ const result = objek.objectify(exampleObject);
 }
 
 ```
+
+### `deleteField(value, ...keys)`
+
+Delete some field in object
+
+```js
+const objek = require("objek");
+
+const exampleObject = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+const result = objek.deleteField(exampleObject, 'age');
+
+// result
+{
+  name: "John",
+  city: "New York",
+}
+```

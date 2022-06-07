@@ -4,7 +4,7 @@
   "description": "Manipulate your object with simple functions",
   "main": "index.js",
   "scripts": {
-    "test": "jest ./functions"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
