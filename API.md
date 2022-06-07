@@ -1,6 +1,6 @@
 # Objek
 
-#### Manipulate your object in one function
+#### Manipulate your object with simple functions
 
 ## Installation
 
@@ -20,9 +20,9 @@ const objek = require("objek");
 
 ## General Usage
 
-### `replaceObjectValue({value})`
+### `replaceObjectField({value})`
 
-Change object value to whatever you want
+Change object key/field to whatever you want
 
 ```js
 const objek = require("objek");
@@ -100,6 +100,12 @@ const result = objek.valueToJSON(exampleObject);
 
 ```
 
+Data Type for `value`:
+
+| Params | Data Type | Description  |
+| ------ | --------- | ------------ |
+| value  | Object    | Object to be |
+
 ### `stringify(value)`
 
 Change object to JSON
@@ -131,6 +137,12 @@ const result = objek.stringify(exampleObject);
 }'
 
 ```
+
+Data Type for `value`:
+
+| Params | Data Type | Description  |
+| ------ | --------- | ------------ |
+| value  | Object    | Object to be |
 
 ### `objectify(value)`
 
@@ -164,6 +176,12 @@ const result = objek.objectify(exampleObject);
 
 ```
 
+Data Type for `value`:
+
+| Params | Data Type | Description  |
+| ------ | --------- | ------------ |
+| value  | Object    | Object to be |
+
 ### `deleteField(value, ...keys)`
 
 Delete some field in object
@@ -185,3 +203,9 @@ const result = objek.deleteField(exampleObject, 'age');
   city: "New York",
 }
 ```
+
+Data Type for `value`:
+
+| Params | Data Type | Description  |
+| ------ | --------- | ------------ |
+| value  | Object    | Object to be |
