@@ -1,10 +1,12 @@
 const { fromPairs } = require("lodash");
 
 /**
+ * Delete some field from a given object
  *
- * @param {Object} object
- * @param  {...string} fields
- * @returns {Object}
+ * @since 1.1.0
+ * @param {Object} object - object of input
+ * @param  {...string} fields - fields/key to be deleted
+ * @returns {Object} object with deleted fields
  *
  */
 module.exports = function (object, ...fields) {
