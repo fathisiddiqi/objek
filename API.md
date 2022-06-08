@@ -102,9 +102,9 @@ const result = objek.valueToJSON(exampleObject);
 
 Data Type for `value`:
 
-| Params | Data Type | Description  |
-| ------ | --------- | ------------ |
-| value  | Object    | Object to be |
+| Params | Data Type | Description                               |
+| ------ | --------- | ----------------------------------------- |
+| value  | Object    | Object to be convert the values to string |
 
 ### `stringify(value)`
 
@@ -140,9 +140,9 @@ const result = objek.stringify(exampleObject);
 
 Data Type for `value`:
 
-| Params | Data Type | Description  |
-| ------ | --------- | ------------ |
-| value  | Object    | Object to be |
+| Params | Data Type | Description                    |
+| ------ | --------- | ------------------------------ |
+| value  | Object    | Object to be convert to string |
 
 ### `objectify(value)`
 
@@ -178,9 +178,9 @@ const result = objek.objectify(exampleObject);
 
 Data Type for `value`:
 
-| Params | Data Type | Description  |
-| ------ | --------- | ------------ |
-| value  | Object    | Object to be |
+| Params | Data Type | Description                    |
+| ------ | --------- | ------------------------------ |
+| value  | string    | String to be convert to object |
 
 ### `deleteField(value, ...keys)`
 
@@ -206,6 +206,7 @@ const result = objek.deleteField(exampleObject, 'age');
 
 Data Type for `value`:
 
-| Params | Data Type | Description  |
-| ------ | --------- | ------------ |
-| value  | Object    | Object to be |
+| Params | Data Type | Description        |
+| ------ | --------- | ------------------ |
+| value  | Object    | Source of object   |
+| keys   | String    | Keys to be deleted |
