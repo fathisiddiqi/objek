@@ -110,6 +110,7 @@ test("Replace object property that contains array of object contains object with
     newField: "id",
     isRecursive: true,
   });
+
   expect(JSON.stringify(result)).toBe(
     JSON.stringify({
       id: "123",
@@ -124,6 +125,47 @@ test("Replace object property that contains array of object contains object with
           },
         },
       ],
+    })
+  );
+});
+
+test("Replace object field without recursive", () => {
+  const exampleObject = {
+    _id: "123",
+    name: "John",
+    friends: [
+      {
+        _id: "456",
+        name: "Jane",
+      },
+    ],
+    parent: {
+      _id: "789",
+      name: "Jack",
+    },
+  };
+
+  const result = replaceObjectField({
+    object: exampleObject,
+    targetField: "_id",
+    newField: "id",
+    isRecursive: false,
+  });
+
+  expect(JSON.stringify(result)).toBe(
+    JSON.stringify({
+      id: "123",
+      name: "John",
+      friends: [
+        {
+          _id: "456",
+          name: "Jane",
+        },
+      ],
+      parent: {
+        _id: "789",
+        name: "Jack",
+      },
     })
   );
 });

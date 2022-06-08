@@ -33,7 +33,8 @@ module.exports = function ({ object, targetField, newField, isRecursive }) {
         if (key === targetField) {
           key = newField;
         }
-        return [key, replaceObjectKey(v)];
+
+        return isRecursive ? [key, replaceObjectKey(v)] : [key, v];
       })
     );
 

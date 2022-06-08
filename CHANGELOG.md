@@ -23,8 +23,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `stringify`
 - Add `objectify`
 
-## [1.1.0] - 2020-06-07
+## [1.1.0] - 2022-06-07
 
 ### Added
 
 - Add `deleteField`
+
+## [1.1.1] - 2022-06-08
+
+### Bugfix
+
+- Fix `replaceObjectField` recursive method
