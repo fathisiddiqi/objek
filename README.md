@@ -15,4 +15,5 @@ $ npm install objek
 ## Resources
 
 - [Documentation and API](/API.md)
-- [Version](/CHANGELOG.md)
+- [Version & Status](/CHANGELOG.md)
+- [License](/LICENSE.md)
