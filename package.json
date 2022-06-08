@@ -1,6 +1,6 @@
 {
   "name": "objek",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Manipulate your object with simple functions",
   "main": "index.js",
   "scripts": {
