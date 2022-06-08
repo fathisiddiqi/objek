@@ -2,8 +2,10 @@ const { fromPairs } = require("lodash");
 
 /**
  * Represent an object to be a stringified JSON
+ *
+ * @since 1.0.0
  * @param {object} object - object of input
- * @returns
+ * @returns {object} object with stringified values
  */
 
 module.exports = function (object) {
