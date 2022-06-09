@@ -19,6 +19,7 @@ const {
  */
 module.exports = function ({
   object,
+  isRecursive,
   isIgnoreNull,
   isIgnoreUndefined,
   isIgnoreEmptyString,
@@ -31,10 +32,26 @@ module.exports = function ({
 
     if (isArray(o)) return o.map(removeEmptyValue);
 
-    console.log(o);
     return fromPairs(
       Object.entries(o)
         .map(([k, v]) => {
+          if (!isRecursive) {
+            return [k, v];
+          }
+
+          if (isArray(v)) {
+            return [
+              k,
+              v
+                .map(removeEmptyValue)
+                .filter((value) => !(isObject(value) && isEmpty(value))),
+            ];
+          }
+
+          if (isPlainObject(v)) {
+            return [k, removeEmptyValue(v)];
+          }
+
           return [k, removeEmptyValue(v)];
         })
         .filter(([k, v]) => {
