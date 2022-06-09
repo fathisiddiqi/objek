@@ -57,7 +57,7 @@ module.exports = function ({
         .filter(([k, v]) => {
           return !(
             (!isIgnoreNull && v === null) ||
-            v === undefined ||
+            (!isIgnoreUndefined && v === undefined) ||
             v === "" ||
             v === 0 ||
             (isArray(v) && v.length < 1) ||
