@@ -23,7 +23,6 @@ module.exports = function ({
   isIgnoreNull,
   isIgnoreUndefined,
   isIgnoreEmptyString,
-  isIgnoreEmptyArray,
   isIgnoreEmptyObject,
   isIgnoreZero,
 }) {
