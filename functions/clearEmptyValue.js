@@ -30,7 +30,7 @@ module.exports = function ({
   const removeEmptyValue = (o) => {
     if (isFunction(o) || !isPlainObject(o)) return o;
 
-    if (isArray(o)) return o.map(removeEmptyValue);
+    if (isArray(o) && o.length > 0) return o.map(removeEmptyValue);
 
     return fromPairs(
       Object.entries(o)
@@ -39,7 +39,7 @@ module.exports = function ({
             return [k, v];
           }
 
-          if (isArray(v)) {
+          if (isArray(v) && v.length > 0) {
             return [
               k,
               v
@@ -60,7 +60,6 @@ module.exports = function ({
             (!isIgnoreUndefined && v === undefined) ||
             (!isIgnoreEmptyString && v === "") ||
             v === 0 ||
-            (isArray(v) && v.length < 1) ||
             (isObject(v) && isEmpty(v))
           );
         })
