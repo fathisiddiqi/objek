@@ -97,3 +97,32 @@ test('Clear empty value in an object with recursive and ignore "empty string"', 
     },
   });
 });
+
+test('Clear empty value in an object with recursive and ignore "empty object"', () => {
+  const objectCleared = clearEmptyValue({
+    object: exampleObj,
+    isRecursive: true,
+    isIgnoreEmptyObject: true,
+  });
+
+  expect(objectCleared).toEqual({
+    c: {},
+    e: [
+      {
+        b: "Test 2",
+      },
+    ],
+    f: {
+      fb: {},
+      fc: [
+        {
+          fcb: {},
+        },
+        {
+          fcd: {},
+        },
+      ],
+      ff: [],
+    },
+  });
+});
