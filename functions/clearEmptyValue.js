@@ -58,7 +58,7 @@ module.exports = function ({
             (!isIgnoreNull && v === null) ||
             (!isIgnoreUndefined && v === undefined) ||
             (!isIgnoreEmptyString && v === "") ||
-            v === 0 ||
+            (!isIgnoreZero && v === 0) ||
             (!isIgnoreEmptyObject && isObject(v) && isEmpty(v))
           );
         })
