@@ -4,4 +4,5 @@ module.exports = {
   valueToJSON: require("./functions/valueToJSON"),
   stringify: require("./functions/stringify"),
   objectify: require("./functions/objectify"),
+  clearEmptyValue: require("./functions/clearEmptyValue"),
 };
