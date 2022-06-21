@@ -10,6 +10,7 @@ const {
 /**
  * Clear field that have null, undefined, empty string, empty array, empty object, zero
  *
+ * @function clearEmptyValue
  * @param {Object} object
  * @param {Boolean} isRecursive
  * @param {Boolean} isIgnoreFunction

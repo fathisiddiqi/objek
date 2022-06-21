@@ -3,6 +3,7 @@ const { isFunction, isPlainObject, isArray, fromPairs } = require("lodash");
 /**
  * Replace object key/field from a given object
  *
+ * @function replaceObjectField
  * @since 1.0.0
  * @param {object} object - object of input
  * @param {string} targetField - field/key to be replaced
