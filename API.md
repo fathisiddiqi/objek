@@ -210,3 +210,41 @@ Data Type for `value`:
 | ------ | --------- | ------------------ |
 | value  | Object    | Source of object   |
 | keys   | String    | Keys to be deleted |
+
+### `clearEmptyValue(value)`
+
+Clear field that have null, undefined, empty string, empty object, zero
+
+```js
+const objek = require("objek");
+
+const exampleObject = {
+  name: "John",
+  age: 30,
+  city: "New York",
+  address: null,
+};
+
+const result = objek.clearEmptyValue({
+  object: exampleObject,
+});
+
+// result
+{
+  name: "John",
+  age: 30,
+  city: "New York",
+}
+```
+
+Data Type for `value`:
+
+| Params              | Data Type | Description                  |
+| ------------------- | --------- | ---------------------------- |
+| object              | Object    | Source of object             |
+| isRecursive         | Boolean   | Using recursive method or no |
+| isIgnoreNull        | Boolean   | default false                |
+| isIgnoreUndefined   | Boolean   | default false                |
+| isIgnoreEmptyString | Boolean   | default false                |
+| isIgnoreEmptyObject | Boolean   | default false                |
+| isIgnoreZero        | Boolean   | default false                |
