@@ -5,4 +5,5 @@ module.exports = {
   stringify: require("./functions/stringify"),
   objectify: require("./functions/objectify"),
   clearEmptyValue: require("./functions/clearEmptyValue"),
+  length: require("./functions/length"),
 };
