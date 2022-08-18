@@ -274,3 +274,34 @@ Data Type for `value`:
 | Params | Data Type | Description      |
 | ------ | --------- | ---------------- |
 | object | Object    | Source of object |
+
+### `findKeyByValue(value, searchValue)`
+
+Search key by value
+
+```js
+const objek = require("objek");
+
+const exampleObject = {
+  name: "John",
+  age: 30,
+  city: "New York",
+  address: null,
+};
+
+const result = objek.findKeyByValue(exampleObject, "New York");
+
+// result
+city;
+```
+
+Data Type for `value`:
+
+| Params | Data Type | Description      |
+| ------ | --------- | ---------------- |
+| value  | Object    | Source of object |
+
+Data Type for `searchValue`:
+| Params | Data Type | Description |
+| ------ | --------- | ---------------- |
+| searchValue | String | value of key that searched |
