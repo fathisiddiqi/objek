@@ -22,7 +22,7 @@ const objek = require("objek");
 
 ### `replaceObjectField({value})`
 
-Change object key/field to whatever you want
+Change object key/field to spesific value
 
 ```js
 const objek = require("objek");
@@ -206,12 +206,16 @@ const result = objek.deleteField(exampleObject, 'age');
 
 Data Type for `value`:
 
-| Params | Data Type | Description        |
-| ------ | --------- | ------------------ |
-| value  | Object    | Source of object   |
-| keys   | String    | Keys to be deleted |
+| Params | Data Type | Description      |
+| ------ | --------- | ---------------- |
+| value  | Object    | Source of object |
 
-### `clearEmptyValue(value)`
+Data Type for `keys`:
+| Params | Data Type | Description |
+| ------ | --------- | ------------------ |
+| keys | String | Keys to be deleted |
+
+### `clearEmptyValue({value})`
 
 Clear field that have null, undefined, empty string, empty object, zero
 
