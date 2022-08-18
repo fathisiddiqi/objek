@@ -248,3 +248,29 @@ Data Type for `value`:
 | isIgnoreEmptyString | Boolean   | default false                |
 | isIgnoreEmptyObject | Boolean   | default false                |
 | isIgnoreZero        | Boolean   | default false                |
+
+### `length(value)`
+
+Calculate object field length
+
+```js
+const objek = require("objek");
+
+const exampleObject = {
+  name: "John",
+  age: 30,
+  city: "New York",
+  address: null,
+};
+
+const result = objek.length(exampleObject);
+
+// result
+4;
+```
+
+Data Type for `value`:
+
+| Params | Data Type | Description      |
+| ------ | --------- | ---------------- |
+| object | Object    | Source of object |
