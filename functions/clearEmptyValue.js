@@ -14,7 +14,7 @@ const {
  * @since 1.2.0
  * @param {Object} object source of object
  * @returns object with cleared empty values
- *
+ * @example clearEmptyValue({a: 1, b: 2, c: null}) // {a: 1, b: 2}
  */
 module.exports = function ({
   object,
