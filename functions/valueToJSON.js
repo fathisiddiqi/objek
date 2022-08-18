@@ -7,6 +7,7 @@ const { fromPairs } = require("lodash");
  * @since 1.0.0
  * @param {object} object - object of input
  * @returns {object} object with stringified values
+ * @example valueToJSON({a: 1, b: 2, c: 3}) // {a: "1", b: "2", c: "3"}
  */
 
 module.exports = function (object) {
