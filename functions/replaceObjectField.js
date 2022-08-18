@@ -10,6 +10,7 @@ const { isFunction, isPlainObject, isArray, fromPairs } = require("lodash");
  * @param {string} newField - new field/key to be replaced
  * @param {boolean} isRecursive - if true, replace all nested fields
  * @returns {object} object with replaced fields
+ * @example replaceObjectField({a: 1, b: 2, c: 3}, "a", "d") // {d: 1, b: 2, c: 3}
  *
  */
 module.exports = function ({ object, targetField, newField, isRecursive }) {
