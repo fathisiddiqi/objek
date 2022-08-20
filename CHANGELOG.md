@@ -40,3 +40,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Add `clearEmptyValue`
+
+## [1.3.0] - 2022-08-20
+
+### Added
+
+- Add `length` for calculating length of object fields
+- Add `findKeyByValue` for find object key by object value
+
+### Modify
+
+- Add example to `valueToJSON`
+- Add example to `stringify`
+- Add example to `replaceObjectField`
+- Add example to `objectify`
+- Add example to `deleteField`
+- Add example to `clearEmptyValue`
+- Modify API.md
